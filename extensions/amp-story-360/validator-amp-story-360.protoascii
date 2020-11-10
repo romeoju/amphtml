@@ -33,7 +33,7 @@ tags: {  # <amp-story-360>
   attrs: {
     name: "controls"
     value: "gyroscope"
-  }    
+  }
   attrs: {
     name: "duration"
     value_regex: "([0-9\\.]+)\\s*(s|ms)"
@@ -41,7 +41,10 @@ tags: {  # <amp-story-360>
   attrs: {
     name: "heading-end"
     value_regex: "-?\\d+\\.?\\d*"
-  }  
+    trigger: {
+      also_requires_attr: "duration"
+    }    
+  }
   attrs: {
     name: "heading-start"
     value_regex: "-?\\d+\\.?\\d*"
@@ -49,6 +52,9 @@ tags: {  # <amp-story-360>
   attrs: {
     name: "pitch-end"
     value_regex: "-?\\d+\\.?\\d*"
+    trigger: {
+      also_requires_attr: "duration"
+    }
   }
   attrs: {
     name: "pitch-start"
@@ -69,6 +75,9 @@ tags: {  # <amp-story-360>
   attrs: {
     name: "zoom-end"
     value_regex: "\\d+\\.?\\d*"
+    trigger: {
+      also_requires_attr: "duration"
+    }
   }
   attrs: {
     name: "zoom-start"
